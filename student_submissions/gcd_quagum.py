@@ -11,5 +11,3 @@ def gcd(a: int, b: int) -> int:
         b = r
 
     print("GCD of {} and {} is: {}".format(true_a, true_b, b))
-
-gcd(1990, 120)
