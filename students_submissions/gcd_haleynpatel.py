@@ -5,13 +5,19 @@ def gcd(a: int, b: int) -> int:
     return a
 
 
-'''def tests():
-    # Test cases
-    print("GCD of 48 and 18 is:", gcd(48, 18))  # Expected: 6
-    print("GCD of 100 and 10 is:", gcd(100, 10))  # Expected: 10
-    print("GCD of 27 and 36 is:", gcd(27, 36))  # Expected: 9
-    print("GCD of 7 and 1 is:", gcd(7, 1))  # Expected: 1
+def run_tests():
+    """Run a set of test cases for the GCD function."""
+    test_cases = [
+        (48, 18, 6),
+        (100, 10, 10),
+        (27, 36, 9),
+        (7, 1, 1)
+    ]
+    
+    for a, b, expected in test_cases:
+        result = gcd(a, b)
+        print(f"GCD of {a} and {b} is: {result} (Expected: {expected})")
+        assert result == expected, f"Test failed for inputs {a} and {b}"
 
 if __name__ == "__main__":
-    tests()
-'''
+    run_tests()
