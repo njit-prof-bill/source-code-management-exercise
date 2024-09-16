@@ -11,3 +11,7 @@ def gcd(a: int, b: int) -> int:
         b = r
 
     print("GCD of {} and {} is: {}".format(true_a, true_b, b))
+
+gcd(54, 24)  # Expected output: 6
+gcd(48, 18)  # Expected output: 6
+gcd(101, 10)  # Expected output: 1
