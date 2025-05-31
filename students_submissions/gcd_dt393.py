@@ -36,21 +36,24 @@ def gcd(a: int, b: int) -> int:
     # check if a or b are primes, if so return 1 as that is the only common denominator between:
     #  unless they are equal prime, in which case return a or b:
     if(primeCheck(a)):
-        if(a == b):
-            return a
-        if(b == 0):
-            return a
-        return 1
+        # 2 is prime, but also equal, so.. gcd(10,2) is 2. 
+        if(a!=2):
+            if(a == b):
+                return a
+            if(b == 0):
+                return a
+            return 1
     # if A is prime and B is 0, A is returned;
     # if A is prime and B is the same value, A or B is returned;
     # if A is prime and B is some other value, such as a non-prime or another prime, then 1 is returned as gcd;
     # vice versa for B to the above;
     if(primeCheck(b)): 
-        if(a == b):
-            return a
-        if(a == 0):
-            return b
-        return 1
+        if(b!=2):
+            if(a == b):
+                return a
+            if(a == 0):
+                return b
+            return 1
 
     # calculate the greatest common denominator:
     # 
@@ -94,4 +97,10 @@ print(gcd(101, 10))  # Expected output: 1
 
 # print(gcd(0, 4))
 # print(gcd(4, 0))
+
+
+print(gcd(4, -5))
+print(gcd(40, 2))
+print(gcd(2, 12))
+
 
