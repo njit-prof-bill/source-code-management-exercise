@@ -36,7 +36,7 @@ def gcd(a: int, b: int) -> int:
     # check if a or b are primes, if so return 1 as that is the only common denominator between:
     #  unless they are equal prime, in which case return a or b:
     if(primeCheck(a)):
-        # 2 is prime, but also equal, so.. gcd(10,2) is 2. 
+        # 2 is prime, but also equal, so.. gcd(10,2) is 2. so skip
         if(a!=2):
             if(a == b):
                 return a
