@@ -26,9 +26,7 @@ def load_and_run():
     for file in student_files:
 
         if file in [
-            "students_submissions/gcd_mma48.py",  # RecursionError: maximum recursion depth exceeded
-            "students_submissions/gcd_sa375.py",  # ValueError: Both numbers cannot be ZERO!
-            "students_submissions/gcd_db624.py",  # RecursionError: maximum recursion depth exceeded
+            "students_submissions/gcd_dt393.py",  # NameError: name 'math' is not defined. Did you forget to import 'math'?
         ]:
             continue
 
@@ -62,21 +60,21 @@ def load_and_run():
                 isprime  # Add isprime to the global namespace
             )
             print(f"Running {module_name}'s submission...")
-            run_gcd_test(gcd_func, 54, 24, 6)
-            run_gcd_test(gcd_func, 48, 18, 6)
-            run_gcd_test(gcd_func, 101, 10, 1)
-            run_gcd_test(gcd_func, 270, 192, 6)
+            # run_gcd_test(gcd_func, 54, 24, 6)
+            # run_gcd_test(gcd_func, 48, 18, 6)
+            # run_gcd_test(gcd_func, 101, 10, 1)
+            # run_gcd_test(gcd_func, 270, 192, 6)
             # Edge case test cases
-            # run_gcd_test(gcd_func, 0, 0, None)  # Both numbers are zero
-            # run_gcd_test(gcd_func, -54, 24, 6)  # One negative number
-            # run_gcd_test(gcd_func, 54, -24, 6)  # One negative number
-            # run_gcd_test(gcd_func, -54, -24, 6)  # Both numbers are negative
-            # run_gcd_test(gcd_func, 0, 24, 24)  # One number is zero
-            # run_gcd_test(gcd_func, 24, 0, 24)  # One number is zero
-            # run_gcd_test(gcd_func, 17, 13, 1)  # Both numbers are prime
-            # run_gcd_test(gcd_func, 1000000000, 2, 2)  # Large number and small number
-            # run_gcd_test(gcd_func, 123456789, 987654321, 9)  # Large numbers
-            # run_gcd_test(gcd_func, 1, 1, 1)  # Both numbers are one
+            run_gcd_test(gcd_func, 0, 0, None)  # Both numbers are zero
+            run_gcd_test(gcd_func, -54, 24, 6)  # One negative number
+            run_gcd_test(gcd_func, 54, -24, 6)  # One negative number
+            run_gcd_test(gcd_func, -54, -24, 6)  # Both numbers are negative
+            run_gcd_test(gcd_func, 0, 24, 24)  # One number is zero
+            run_gcd_test(gcd_func, 24, 0, 24)  # One number is zero
+            run_gcd_test(gcd_func, 17, 13, 1)  # Both numbers are prime
+            run_gcd_test(gcd_func, 1000000000, 2, 2)  # Large number and small number
+            run_gcd_test(gcd_func, 123456789, 987654321, 9)  # Large numbers
+            run_gcd_test(gcd_func, 1, 1, 1)  # Both numbers are one
             print()
         else:
             print(f"ERROR: {module_name}'s submission does not have a gcd function\n")
