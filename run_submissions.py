@@ -27,6 +27,7 @@ def load_and_run():
 
         if file in [
             "students_submissions/gcd_dt393.py",  # NameError: name 'math' is not defined. Did you forget to import 'math'?
+            "students_submissions/gcd_zlk.py",  # ZeroDivisionError: integer modulo by zero
         ]:
             continue
 
