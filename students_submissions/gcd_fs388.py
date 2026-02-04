@@ -1,4 +1,9 @@
 def gcd(a: int, b: int) -> int:
+    # Validate inputs
+    if not isinstance(a, int) or not isinstance(b, int):
+        print("Error: Both inputs must be integers.")
+        return None
+    
     # Handle negative numbers
     a = abs(a)
     b = abs(b)
